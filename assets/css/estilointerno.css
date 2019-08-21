@@ -1,0 +1,52 @@
+
+.campo-drop{
+	position: left;
+	background-color: #B0C4DE;
+	height: 50em;
+	border-radius: 10px;
+
+}
+.ui-draggable-handle {
+z-index: 1;
+}  
+.caixa_atributo{
+	background-color: #DCDCDC;
+	position: relative;
+	width: 150px;
+	height: 100px;
+	border-radius: 10px;
+	margin: 3px 3px 3px 3px;
+}
+
+.caixa_atributo label{
+	background-color: #4682B4;
+	width: 150px;
+	height: auto;
+	color: white;
+	text-align: center;
+}
+.navbar-nav{
+	padding-left: 5.5em;
+}
+
+.menu a {
+	padding-left: 1em;
+}
+.container h3{
+	margin-top: 1em;
+	margin-bottom: 1em; 
+}
+.container h2{
+	margin-top: 1em;
+}
+input{
+	width: 150px;
+}
+select{
+	width: 150px;
+}
+#enviar{
+
+	width: 100px;
+	height: 100px;
+}

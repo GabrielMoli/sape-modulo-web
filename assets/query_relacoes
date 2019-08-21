@@ -1,0 +1,26 @@
+SELECT a.ano_ingresso, d.nome_disciplina, situacao_matricula.descricao FROM aluno_has_disciplina
+INNER JOIN aluno as a ON a.id = aluno_has_disciplina.id_aluno
+INNER JOIN disciplina as d ON d.id = aluno_has_disciplina.id_disciplina
+INNER JOIN situacao_matricula ON situacao_matricula.id = a.situacao_matricula_id
+
+
+SELECT aluno.ano_ingresso,aluno.semestre_ingresso,atividade_extraclasse.remuneracao, situacao_matricula.descricao FROM atividade_extraclasse_has_aluno 
+INNER JOIN aluno ON aluno.id = atividade_extraclasse_has_aluno.id_aluno
+INNER JOIN atividade_extraclasse ON atividade_extraclasse.id = atividade_extraclasse_has_aluno.id
+INNER JOIN situacao_matricula ON situacao_matricula.id = aluno.situacao_matricula_id
+
+
+
+#INNER JOIN pega só o que tem nos dois lados
+#ON junta as chaves estrangeiras 
+
+
+
+############### Query de criar tabela de relações ################
+
+CREATE TABLE atividade_extraclasse_has_aluno (
+	id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_atividade_extraclasse int,
+    CONSTRAINT fk_Atv FOREIGN KEY (id_atividade_extraclasse) REFERENCES atividade_extraclasse (id),
+	id_aluno int, CONSTRAINT fk_AluAtv FOREIGN KEY (id_aluno) REFERENCES aluno (id)
+);
